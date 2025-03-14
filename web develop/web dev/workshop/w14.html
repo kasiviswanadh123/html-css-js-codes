@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="radio" id="radred" name="a" value="red"/> red  
+        <input type="radio" id="radgreen" name="a" value="green"/> green
+        <input type="radio" id="radyellow" name="a" value="yellow"/> yellow
+    </form>
+    document.bgcolor="red",<br>;
+    document.bgcolor="green",<br>;
+    document.bgcolor="yellow",<br>;
+</body>
+<script>
+    let radred = document.querySelector("#radred");
+    let radgreen = document.querySelector("#radgreen");
+    let radyellow = document.querySelector("#radyellow");
+
+    radred.addEventListener("click",()=>{
+        document.bgColor="red";
+    })
+
+    radgreen.addEventListener("click",()=>{
+        document.bgColor="green";
+    })
+
+    radyellow.addEventListener("click",()=>{
+        document.bgColor="yellow";
+    })
+
+    
+</script>
+</html>

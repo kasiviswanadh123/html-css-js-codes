@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Background Color</title>
+</head>
+<body>
+    <select id="selectcity">
+        <option value="Select City">Select City</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Hyderabad">Hyderabad</option>
+    </select>
+    <span id="spanans"></span>
+
+    <script>
+        let selectcity = document.querySelector("#selectcity");
+        let spanans = document.querySelector("#spanans");
+
+        selectcity.addEventListener("change", () => {
+            let choice = selectcity.value;
+            spanans.innerHTML = choice;
+
+            // Change the background color based on city
+            if (choice === "Mumbai") {
+                document.body.style.backgroundColor = "red";
+            } else if (choice === "Delhi") {
+                document.body.style.backgroundColor = "blue";
+            } else if (choice === "Chennai") {
+                document.body.style.backgroundColor = "green";
+            } else if (choice === "Kolkata") {
+                document.body.style.backgroundColor = "yellow";
+            } else if (choice === "Bangalore"){
+                document.body.style.backgroundColor = "orange"; // Default color for "Select City"
+            }
+            else if (choice === "Hyderabad") {
+                document.body.style.backgroundColor = "purple";
+            } else {
+                document.body.style.backgroundColor = "white"; // Default color for "Select City"
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="b">
+    cricket <input type="checkbox" id="chkcricket"/> <br>
+    football <input type="checkbox" id="chkfootball"/> <br>
+    tennis <input type="checkbox" id="chktennis"/> <br>
+    chess <input type="checkbox" id="chkchess"/>
+    <br/>
+    <span id="spanans"/>
+
+</body>
+<script>
+    const b = document.getElementById("b");
+    b.style.backgroundColor = "lightgreen";
+    b.style.textAlign = "center";
+    b.style.fontFamily = "Helvetica";
+    b.style.fontSize = "24px";
+    b.style.padding = "200px";
+    let chkcricket = document.querySelector("#chkcricket");
+    let chkfootball = document.querySelector("#chkfootball");
+    let chktennis = document.querySelector("#chktennis");
+    let chkchess = document.querySelector("#chkchess");
+
+    chkcricket.addEventListener("change", ()=>{
+        if(chkcricket.checked)
+        {
+            spanans.innerHTML = "cricket";
+        }
+    })
+    chkfootball.addEventListener("change", ()=>{
+        if(chkfootball.checked)
+        {
+            spanans.innerHTML = "football";
+        }
+    })
+    chktennis.addEventListener("change", ()=> {
+        if(chktennis.checked)
+        {
+            spanans.innerHTML = "tennis";
+        }
+    });
+    chkchess.addEventListener("change", ()=> {
+        if(chkchess.checked)
+        {
+            spanans.innerHTML = "chess";
+        }
+        else {
+            spanans.innerHTML = "not select anything";
+        }
+    });
+
+
+
+</script>
+
+</html>

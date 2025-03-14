@@ -1,0 +1,16 @@
+.list {
+    list-style: square;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    background-color: rgba(192, 255, 230, 0.922);
+}
+th, td {
+    border: double;
+}
+th {
+    text-align: center;
+}

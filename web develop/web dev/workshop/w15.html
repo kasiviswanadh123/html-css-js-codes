@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    No1 : <input type="text" id="txtno1"/> <br/>
+    No2 : <input type="text" id="txtno2"/> <br/>
+    <input type="radio" id="radplus" name="a"/> + 
+    <input type="radio" id="radminus" name="a"/> - 
+    <input type="radio" id="radmulti" name="a"/> * 
+    <input type="radio" id="raddiv" name="a"/> / 
+    <span id="spanans"/>
+</body>
+<script>
+    let txtno1=document.querySelector("#txtno1");
+    let txtno2=document.querySelector("#txtno2");
+    let radplus=document.querySelector("#radplus");
+    let spanans=document.querySelector("#spanans");
+
+    radplus.addEventListener("click",()=>{
+
+        let no1=parseInt(txtno1.value);
+        let no2=parseInt(txtno2.value);
+        
+        spanans.innerHTML=no1+no2;
+
+    })
+    radminus.addEventListener("click",()=>{
+        let no1=parseInt(txtno1.value);
+        let no2=parseInt(txtno2.value);
+        
+        spanans.innerHTML=no1-no2;
+
+    });
+    radmulti.addEventListener("click",()=>{
+        let no1=parseInt(txtno1.value);
+        let no2=parseInt(txtno2.value);
+        
+        spanans.innerHTML=no1*no2;
+
+    });
+    raddiv.addEventListener("click",()=>{
+        let no1=parseInt(txtno1.value);
+        let no2=parseInt(txtno2.value);
+        
+        spanans.innerHTML=no1/no2;
+    });
+
+</script>
+</html>

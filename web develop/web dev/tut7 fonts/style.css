@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Playwrite+HR+Lijeva:wght@100..400&family=Yuji+Mai&display=swap');
+body {
+    text-align: center;
+    background-color: yellow;
+}
+h1 {
+    color: red;
+    font-family: "Playwrite HR Lijeva", cursive;
+    font-size: 2em;
+    letter-spacing: 40px;
+}
+
+p {
+    color:green;
+    font-size: 50px;
+
+}

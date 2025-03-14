@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <style>
+        /* General form styles */
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Input field styles */
+        form input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        /* Button styles */
+        form input[type="button"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Answer span styles */
+        form span {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Label styles */
+        form label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Break styles for spacing */
+        form br {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body id="b">
+
+    <form id="f">
+        <label for="txtno1">Number1:</label>
+        <input type="text" id="txtno1" placeholder="Enter first number"/> <br/>
+        
+        <label for="txtno2">Number2:</label>
+        <input type="text" id="txtno2" placeholder="Enter second number"/> <br/>
+
+        <input type="button" id="btnans" value="Click me"/>
+        <span id="spanans"></span>
+    </form>
+
+</body>
+<script>
+    let txtno1= document.querySelector("#txtno1");
+    let txtno2= document.querySelector("#txtno2");
+    let btnans= document.querySelector("#btnans");
+    let spanans= document.querySelector("#spanans");
+    const b = document.getElementById("b");
+    b.style.backgroundColor = "lightblue";
+    const f = document.getElementById("f");
+    f.style.borderColor = "red";
+
+    btnans.addEventListener("click", ()=> {
+        let no1= parseInt(txtno1.value);
+        let no2= parseInt(txtno2.value);
+
+        spanans.innerHTML = (no1*no2);
+        spanans.innerHTML = (no1-no2);
+        spanans.innerHTML = (no1/no2);
+        spanans.innerHTML = (no1+no2);
+    });
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <img src="" id="img1" height="300" width="250"/>
+        <input type="radio" name="a" id="NTR" /> NTR
+        <input type="radio" name="a" id="Charan"  /> Charan
+        <input type="radio" name="a" id="AA"  /> AA
+    <style>
+        body
+        {
+            background-color: lightblue;
+        }
+    </style>
+
+    </form>
+    <script>
+        let img1 = document.querySelector("#img1");
+        let NTR = document.querySelector("#NTR");
+        let Charan = document.querySelector("#Charan");
+        let AA = document.querySelector("#AA");
+
+        NTR.addEventListener("change", ()=> {
+            img1.src = "images/img1.jpeg";
+        });
+        
+        Charan.addEventListener("change", () => {
+            img1.src = "images/img2.jpg";
+        });
+        
+        AA.addEventListener("change", () => {
+            img1.src = "images/img3.jpEg";
+        });
+    </script>
+</body>
+</html>

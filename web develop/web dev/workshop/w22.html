@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggle Example</title>
+</head>
+<body>
+    <!-- Images with unique IDs -->
+    <img id="img1" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img2" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img3" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img4" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img5" src="images/img10.jpeg" height="100px" width="100px" />
+    <br/>
+    <img id="img6" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img7" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img8" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img9" src="images/img10.jpeg" height="100px" width="100px" />
+    <img id="img10" src="images/img10.jpeg" height="100px" width="100px" />
+
+    <script>
+        // Array of image objects with IDs and new source paths
+        const images = [
+            { id: "img1", src: "images/img5.jpg" },
+            { id: "img2", src: "images/img6.jpg" },
+            { id: "img3", src: "images/img7.jpg" },
+            { id: "img4", src: "images/img8.jpg" },
+            { id: "img5", src: "images/img9.jpg" },
+            { id: "img6", src: "images/img8.jpg" },
+            { id: "img7", src: "images/img7.jpg" },
+            { id: "img8", src: "images/img5.jpg" },
+            { id: "img9", src: "images/img9.jpg" },
+            { id: "img10", src: "images/img6.jpg" }
+        ];
+
+        // Add click event listeners to each image
+        images.forEach(image => {
+            const imgElement = document.querySelector(`#${image.id}`);
+            const originalSrc = imgElement.src; // Store the original source
+
+            imgElement.addEventListener("click", () => {
+                // Toggle between the original and new image source
+                if (imgElement.src === originalSrc) {
+                    imgElement.src = image.src; // Change to the new image
+                } else {
+                    imgElement.src = originalSrc; // Change back to the original image
+                }
+            });
+        });
+    </script>
+</body>
+</html>

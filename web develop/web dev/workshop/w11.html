@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Numbers</title>
+</head>
+<body>
+    <input type="text" id="txtno1" placeholder="Enter first number">
+    <input type="text" id="txtno2" placeholder="Enter second number">
+    <button id="btnans">Compare</button>
+    <span id="spanans"></span>
+
+    <script>
+        const btnans = document.getElementById("btnans");
+        const spanans = document.getElementById("spanans");
+        const txtno1 = document.getElementById("txtno1");
+        const txtno2 = document.getElementById("txtno2");
+
+        btnans.addEventListener("click", () => {
+            let no1 = parseInt(txtno1.value);
+            let no2 = parseInt(txtno2.value);
+
+            if (no1 > no2) {
+                spanans.innerHTML = "<h3>no1 is greater</h3>";
+            } else {
+                spanans.innerText = "<h3>no2 is greater</h3>";
+            }
+        });
+    </script>
+</body>
+</html>

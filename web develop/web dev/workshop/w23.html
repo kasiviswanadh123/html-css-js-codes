@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="button" id="btngen" value="Genrate" /> <br/>
+       No1 <input type="text" id="txtno1" readonly/> <br/>
+       No2 <input type="text" id="txtno2" readonly/> <br/>
+       <input type="text" id="txtans" placeholder="answer here">
+       <br/>
+       <input type="button" id="btncheck" value="check"/><br/>
+    </form>
+</body>
+<script>
+    let txtno1=document.querySelector("#txtno1");
+    let txtno2=document.querySelector("#txtno2");
+    let btncheck=document.querySelector("#btncheck");
+    let txtans=document.querySelector("#txtans");
+    let btngen=document.querySelector("#btngen");
+    
+    btngen.addEventListener("click",()=>{
+        const randomNumber1 = Math.floor(Math.random() * 50) + 1;
+        const randomNumber2 = Math.floor(Math.random() * 50) + 1;
+        
+        txtno1.value=randomNumber1;
+        txtno2.value=randomNumber2;
+        
+    })
+
+    btncheck.addEventListener("click",()=>{
+        let userAnswer = parseInt(txtans.value); 
+
+            let a = parseInt(txtno1.value);
+            let b = parseInt(txtno2.value);
+            let c = parseInt(txtans.value);
+
+            if(a+b==c)
+            {
+                alert("Correct Answer!");
+            }
+            else
+            {
+                alert("Wrong Answer!");
+            }
+        });
+    
+
+</script>
+</html>

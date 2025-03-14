@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        /* Tic Tac Toe Styles */
+        .tic-tac-toe {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 10px;
+            justify-content: center;
+            margin: 50px auto;
+            padding: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: max-content;
+        }
+
+        .tic-tac-toe button {
+            width: 100px;
+            height: 100px;
+            font-size: 24px;
+            color: #007BFF;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .tic-tac-toe button:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .tic-tac-toe button:disabled {
+            background-color: #ccc;
+            color: #666;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tic-tac-toe">
+        <button id="btn1"></button>
+        <button id="btn2"></button>
+        <button id="btn3"></button>
+        <button id="btn4"></button>
+        <button id="btn5"></button>
+        <button id="btn6"></button>
+        <button id="btn7"></button>
+        <button id="btn8"></button>
+        <button id="btn9"></button>
+    </div>
+
+    <script>
+          
+       let btn1 = document.querySelector("#btn1");
+       let btn2 = document.querySelector("#btn2");      
+       let btn3 = document.querySelector("#btn3");
+       let btn4 = document.querySelector("#btn4");
+       let btn5 = document.querySelector("#btn5");
+       let btn6 = document.querySelector("#btn6");
+       let btn7 = document.querySelector("#btn7");
+       let btn8 = document.querySelector("#btn8");
+       let btn9 = document.querySelector("#btn9");
+       
+       let c=1;
+       btn1.addEventListener("click",()=>{
+
+        btn1.textContent = "0";
+
+        if(c%2==0)
+        {
+            btn1.textContent = "0";
+        }
+        else 
+        {
+            btn1.textContent = "X";
+        }
+        c++;
+    });
+        btn2.addEventListener("click",()=>{
+
+            btn2.textContent = "0";
+    
+            if(c%2==0)
+            {
+                btn2.textContent = "0";
+            }
+            else 
+            {
+                btn2.textContent = "X";
+            }
+            c++;
+       });
+       btn3.addEventListener("click",()=>{
+
+        btn3.textContent = "0";
+
+        if(c%2==0)
+        {
+            btn3.textContent = "0";
+        }
+        else 
+        {
+            btn3.textContent = "X";
+        }
+        c++;
+   });
+   btn4.addEventListener("click",()=>{
+
+    btn4.textContent = "0";
+
+    if(c%2==0)
+    {
+        btn4.textContent = "0";
+    }
+    else 
+    {
+        btn4.textContent = "X";
+    }
+    c++;
+});
+
+btn5.addEventListener("click",()=>{
+
+    btn5.textContent = "0";
+
+    if(c%2==0)
+    {
+        btn5.textContent = "0";
+    }
+    else 
+    {
+        btn5.textContent = "X";
+    }
+    c++;
+});
+btn6.addEventListener("click",()=>{
+
+    btn6.textContent = "0";
+
+    if(c%2==0)
+    {
+        btn6.textContent = "0";
+    }
+    else 
+    {
+        btn6.textContent = "X";
+    }
+    c++;
+});
+btn7.addEventListener("click",()=>{
+
+    btn7.textContent = "0";
+
+    if(c%2==0)
+    {
+        btn7.textContent = "0";
+    }
+    else 
+    {
+        btn7.textContent = "X";
+    }
+    c++;
+});
+btn8.addEventListener("click",()=>{
+
+    btn8.textContent = "0";
+
+    if(c%2==0)
+    {
+        btn8.textContent = "0";
+    }
+    else 
+    {
+        btn8.textContent = "X";
+    }
+    c++;
+});
+btn9.addEventListener("click",()=>{
+
+    btn9.textContent = "0";
+
+    if(c%2==0)
+    {
+        btn9.textContent = "0";
+    }
+    else 
+    {
+        btn9.textContent = "X";
+    }
+    c++;
+});
+        
+
+        // JavaScript logic for Tic Tac Toe can be added here
+    </script>
+
+</body>
+</html>

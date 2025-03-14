@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body id="b">
+    No1: <input type="text" id="txtno1"/> <br/>
+    No2: <input type="text" id="txtno2"/> <br/>
+    <input type="radio" id="radplus" name="operation" value="plus"/> + 
+    <input type="radio" id="radminus" name="operation" value="minus"/> - 
+    <input type="radio" id="radmulti" name="operation" value="multiply"/> * 
+    <input type="radio" id="raddiv" name="operation" value="divide"/> / 
+    <br/>
+    <span id="spanans"></span> 
+    
+    <script>
+        const b= document.getElementById("b");
+        b.style.backgroundColor = "lightblue";
+        b.style.textAlign = "center";
+        b.style.fontSize = "24px";
+        b.style.padding = "200px";
+        b.style.fontWeight = "bold";
+        let txtno1 = document.querySelector("#txtno1");
+        let txtno2 = document.querySelector("#txtno2");
+        let radplus = document.querySelector("#radplus");
+        let radminus = document.querySelector("#radminus");
+        let radmulti = document.querySelector("#radmulti");
+        let raddiv = document.querySelector("#raddiv");
+        let spanans = document.querySelector("#spanans");
+
+    
+        radplus.addEventListener('change', calculate);
+        radminus.addEventListener('change', calculate);
+        radmulti.addEventListener('change', calculate);
+        raddiv.addEventListener('change', calculate);
+
+    
+        function calculate() {
+            let num1 = parseFloat(txtno1.value); 
+            let num2 = parseFloat(txtno2.value); 
+
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                spanans.textContent = "Please enter valid numbers!";
+                return;
+            }
+
+            let result;
+
+        
+            if (radplus.checked) {
+                result = num1 + num2;
+            } else if (radminus.checked) {
+                result = num1 - num2;
+            } else if (radmulti.checked) {
+                result = num1 * num2;
+            } else if (raddiv.checked) {
+                
+                if (num2 === 0) {
+                    result = "Cannot divide by zero!";
+                } else {
+                    result = num1 / num2;
+                }
+            } else {
+                result = "Please select an operation.";
+            }
+
+            
+            spanans.textContent = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

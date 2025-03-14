@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="mybody">
+    <h1 id="h1" class="h1"> hi hello</h1>
+    <p id="p">my name is raju</p>
+    <script>
+        const h1 = document.getElementById("h1");
+        h1.classList.add("h1new");
+        h1.classList.remove("h1");
+        const newElement = document.createElement("button");
+        newElement.textContent = "click here";
+        newElement.classList.add("button");
+        const mybody = document.getElementById("mybody");
+        mybody.appendChild(newElement);
+    </script>
+
+</body>
+</html>

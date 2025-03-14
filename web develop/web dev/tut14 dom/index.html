@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="myh1">Welcome to Web Development</h1>
+    <p id="myp">This is a basic HTML document.</p>
+    <a id="a">youtube</a>
+
+<script>
+    const heading = document.getElementById("myh1");
+    heading.style.color = "red";
+    const para = document.getElementById("myp");
+    para.style.color = "blue";
+    para.style.fontSize = "10px";
+    const anchor = document.getElementById("a");
+    anchor.href = "http://www.youtube.com/@Kasiviswanadh123";
+    anchor.style.color = "green";
+    anchor.style.fontSize = "50px";
+    const myh1 = document.getElementById("myh1");
+    myh1.classList.add("myh1new");
+    myh1.classlist.remove("myh1"); 
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div id="div">
+        <p id="p"> counter: 0 <span id="counter">0</span></p>
+        <button id="abutton"> Increment </button>
+        <button id="bbutton"> Decrement </button>
+    </div>
+        <script>
+            const counter = document.getElementById("counter");
+            const abutton = document.getElementById("abutton");
+            const bbutton = document.getElementById("bbutton");
+            let count = 0;
+            abutton.addEventListener("click",function(){
+                count++;
+                counter.textContent = count;
+            })
+            bbutton.addEventListener("click",function(){
+                count--;
+                counter.textContent = count;
+            })
+            const div = document.getElementById("div");
+            div.style.textAlign = "center";
+            div.style.padding = "250px";
+            const para = document.getElementById("p");
+            para.style.color = "red";
+            para.style.fontSize ="30px";
+            const button1 = document.getElementById("abutton");
+            button1.style.color = "green";
+            const button2 = document.getElementById("bbutton");
+            button2.style.color = "orange";
+            const body = document.getElementById("body");
+            body.style.backgroundColor = "lightblue";
+    
+    </script>
+</body>
+</html>
